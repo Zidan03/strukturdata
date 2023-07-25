@@ -8,7 +8,7 @@ public class AVLTree {
         }
         return node.height;
     }
-//menghitung
+//menghitung faktor keseimbangan
     int getBalanceFactor (Node node) {
         if (node == null) {
             return 0;
@@ -41,7 +41,7 @@ public class AVLTree {
 
         return y;
     }
-
+// untuk memasukakkan node baru
     Node insertNode (Node node, int key) {
         if (node == null) {
             return new Node(key);
@@ -79,8 +79,7 @@ public class AVLTree {
 
         return node;
     }
-//untuk penghapusan node tetapi, kita memerlukan nilai terkecil yang lebih besar dari node
-// yang akan dihapus untuk menggantikan posisinya.
+//untuk penghapusan node tetapi, kita memerlukan nilai terkecil yang lebih besar dari node yang akan dihapus untuk menggantikan posisinya.
     Node minValueNode (Node node) {
         Node current = node;
         while (current.left != null) {
